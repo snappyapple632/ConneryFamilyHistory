@@ -33,21 +33,3 @@ After you have installed gnuclad, to build just the svg, run:
 
 You can run the script `build.sh` to build the svg, png, and the tarball
 containing the source, ImageMagick is required to convert from svg to png.
-
-### Related resources
-
-https://distrowatch.com/
-
-https://archiveos.org/linux/
-
-https://lwn.net/Distributions/
-
-https://www.ibiblio.org/pub/linux/distributions/
-
-https://www.linuxlinks.com/Distributions/
-
-https://www.debian.org/derivatives/
-
-https://wiki.archlinux.org/index.php/Arch-based_distributions
-
-https://distroware.gitlab.io/lists/RaspberryPi_OS/
