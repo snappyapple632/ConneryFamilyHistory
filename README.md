@@ -1,4 +1,4 @@
-Linux Distribution Timeline | README
+Connery Family History | README
 ------------------------------------
 
 * Copyright (C) 2010-2012 Andreas Lundqvist, Donjan Rodic, Mohammed A. Mustafa
