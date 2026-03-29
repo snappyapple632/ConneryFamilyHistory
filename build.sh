@@ -40,14 +40,14 @@ gen_png() {
 dist() {
     [ "$tl_run" ]              || gen_svg
     [ "$png_run" ]             || gen_png
-    msg "Generating $PROJNAME$VERS.tar.gz ..."
-    command -v tar  >/dev/null || die "tar not found"
-    command -v gzip >/dev/null || die "gzip not found"
+    #msg "Generating $PROJNAME$VERS.tar.gz ..."
+    #command -v tar  >/dev/null || die "tar not found"
+    #command -v gzip >/dev/null || die "gzip not found"
 
-    tar cf "dist/$PROJNAME$VERS.tar" "$PROJNAME.csv" "$PROJNAME.conf" CHANGELOG README.md LICENSE images build.sh CONTRIBUTING
-    gzip -f "dist/$PROJNAME$VERS.tar"
+    #tar cf "dist/$PROJNAME$VERS.tar" "$PROJNAME.csv" "$PROJNAME.conf" CHANGELOG README.md LICENSE images build.sh CONTRIBUTING
+    #gzip -f "dist/$PROJNAME$VERS.tar"
 
-    msg "Generated dist/$PROJNAME$VERS.tar.gz"
+    #msg "Generated dist/$PROJNAME$VERS.tar.gz"
 }
 
 # shellcheck disable=2016
