@@ -46,13 +46,20 @@ directly assigned SVG images. DO NOT USE THIS DATA TYPE
 FOR OUTFIT LOGOS. Doesn't work, reserved for future use.
 
 You can comment out an entire row by adding a # before
-the letter indicating data type.
+the letter indicating data type, e.g. "#N", "#C". Doing
+this will make gnuclad ignore that entry when generating
+the chart. This can be used to keep outfits with insufficient
+data documented but not be used for generation, so as to avoid
+errors without actually omitting data from the CSV.
 
 NODES
 # Column B: Outfit Tag and Name
 
-# Column C: Color
-Outfit colors are to be assigned to their main (default) faction.
+Should be formatted with the outfit tag and name exactly as it appear(s/ed)
+in the game. e.g. "[00] Recursion"
+
+# Column C: Node Color
+Node colors are to be assigned by the outfit's main (default) faction in PlanetSide.
 #0138a4 = New Conglomorate
 #c90000 = Terran Republic
 #662bbf = Vanu Soverignty
@@ -62,26 +69,20 @@ Outfit colors are to be assigned to their main (default) faction.
 # Column D: Parent
 
 Copy and past the name of an outfit's parent outfit into
-this column, if applicable. Leave blank if they do not
-have a parent.
+this column, if applicable. Leave blank if they do not have a parent.
 
-# Columns E: Start Dates
+# Column E: Start Date
+- The start date of an outfit must be precise to, at minimum, the year.
+  Outfits with no known start year cannot be placed on the chart.
+- The start date must be formatted in the CSV as "YYYY.MM.DD" if using a basic text editor.
+  "YYYY.MM" if the date is precise to the month, "YYYY" if precise to the year.
+- If they do not have a known start date, they cannot be added to the chart.
+- Any outfit with origins predating PlanetSide 2 (i.e. came from PlanetSide 1
+  or possibly even further in the past) are to have their start date set to "2012".
 
-The ideal start date is when the outfit is formed on PlanetSide 2 itself.
-Generally, we want this date to be precise to the month. If you know the
-exact day an outfit was created, that's even better!
+# Column F: Stop Date (Deadfits)
 
-All dates on the spreadsheet are formatted as YYYY.MM.DD . Dates consisting
-of the year only (YYYY), or year and month (YYYY.MM), are also acceptable.
-
-START DATES MUST HAVE AT LEAST A YEAR OF ESTABLISHMENT. If they do not have a
-known start date, they cannot be added to the chart.
-
-# Column F: Stop Dates (Deadfits)
-
-If the outfit is known to be presently active, leave this column blank.
-This column is also left blank for inactive outfits with no known stop
-date, this is meant to be temporary.
+Same format as column E.
 
 People get bored of PlanetSide, or sometimes infighting can occur within
 an outfit that results in fallout. Determining stop dates for outfits
@@ -89,23 +90,25 @@ tends to be difficult as the means of measuring activity is nebulous.
 Additionally, any outfit that is deleted from PlanetSide leaves no trace
 (aside from outfit decals, if they had the luxury of owning one).
 
-1. If the outfit has an announcement or statement on discontinuing the
-   outfit, use the announcement date as the stop date.
-2. If any group of players belonging to an outfit are online on
+- If the outfit is known to be presently active, leave this column blank.
+- If any group of players belonging to an outfit are online on
    PlanetSide in regular intervals, consider that outfit active.
-3. If the outfit is still active but no longer plays PlanetSide,
+- If the outfit has an announcement or statement on discontinuing the
+   outfit, use the announcement date as the stop date.
+- If the outfit is still active but no longer plays PlanetSide,
    set the stop date to their last known date of activity + 6 months.
-4. If an outfit ceases activity and goes radio silent, set their stop date
+- If an outfit ceases activity without notice, set their stop date
    to their last known date of activity.
-
-THERE IS AN EXCEPTION FOR OUTFIT REBRANDS; SEE COLUMN I.
+- Outfit rebrands (name changes) have their own procedure for documentation.
+  See "Column I: Name Change"
 
 # Column G: Icon
 
 Reserved for future use. Setting this column to "images/outfit_logo.svg"
-will add a an outfit's logo next to the node, but I haven't gotten that
+should add a an outfit's logo next to the node, but I haven't gotten this
 to work. Gnuclad has very specific requirements for SVGs so I'm not
-bothering with outfit logos for the time being. Gnuclad only accepts SVGs.
+bothering with outfit logos for the time being. Gnuclad supposedly
+supports PNGs as well, but I cannot verify this at this time.
 
 # Column H: Description
 
@@ -113,19 +116,26 @@ Any other comments for a particular outfit are left here.
 
 # Column I: Name Change
 
-Outfits that undergo a rebrand (i.e. change their name but otherwise
-consist of the same members and outfit ethos), there are columns to
-accomodate for name changes. Fill this column with the outfit's
-new tag and name.
+For outfits that undergo a rebrand (i.e. change their name but otherwise
+retain the same members, ethos, and philosophy), columns I-K are to
+be used to document these rebrands. They appear on the chart as small
+dots on the same branch as the original outfit.
+
+If a rebrand occurred shortly after an outfit was formed, or multiple
+name changes occured within the span of ~6 months or less, the names of
+the entries on the chart will overlap with other. Therefore, it may be
+neccessary to remove intermediary name changes from the chart to unclutter
+it and leave only the names an outfit settles on for long periods of time.
+These offending name changes can be documented in Column H instead.
 
 # Column J: Date of Name Change
 
-The date of the name change will be marked as a smaller dot on the
-same branch as the outfit's former name.
+Same format as columns E and F. The date of the name change will be
+marked as a smaller dot on the same branch as the outfit's former name.
 
 # Column K: Name Change Description
 
-Another column for comments.
+Comments pertaining to the outfit's name change.
 
 # Columns L-N:
 
@@ -138,12 +148,13 @@ CONNECTORS
 The date of which a connector starts.
 
 # Column C: From
-Which outfit the connector stems from.
+Which outfit the connector stems from. Appears on the
+chart as a semicircle where a dotted line protrudes from.
 
 # Column D: To When
 Optional date for where the connector ends.
 Leaving this blank will set this to the date
-in column B.
+set in column B.
 
 # Column E: To
 Which outfit the connector connects to.
@@ -151,15 +162,14 @@ Which outfit the connector connects to.
 # Column F: Thickness
 Set this column as follows:
 
-2 for collaborations (e.g. NE0N, BRAC, 53C, etc.
+"2" for collaborations (e.g. NE0N, BRAC, 53C, etc.
 forming NDC/RALI).
 
-3 for outfit merges (e.g. GOLD, HT, 4x4, BADD, etc.
+"3" for outfit merges (e.g. GOLD, HT, 4x4, BADD, etc.
 merging into RBRN/Recursion). Any outfit that has
-merged with another should be kept as close together
-as reasonably possible. This helps keep connectors short and
-clean, which avoids bogging up the chart with vertical lines.
-Remember to keep the chart coherent!
+merged with another should be kept as close together in the CSV
+as reasonably possible. This helps keep connectors short minimizes
+clutter on the chart.
 
 # Column G: Color
 Set this to the faction color of the outfit in column E.
