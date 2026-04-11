@@ -1,23 +1,23 @@
 Conner Family History | CONTRIBUTING
 ------------------------------------------
 
-Because I want to keep it simple and coherent with previous versions by
-the original maintainers, I decided to make this very simple guide of
-how to contribute to this project. You are not obliged to follow this,
-but you'll ease my job if you do. :)
+This is a simple guide describing the formatting of the CSV file that
+keeps all data on the outfits of former Connery, should you wish to contribute
+or even branch off to make your own family tree for outfit belonging to another
+server. You are not obliged to follow this, but you'll ease my job if you do. :)
 
 
-Open an issue on GitHub
-=======================
+Opening an issue on GitHub
+==========================
 
-Open a new issue: https://github.com/snappyapple632/ConneryFamilyHistory/issues/new
+Open a new issue here: https://github.com/snappyapple632/ConneryFamilyHistory/issues/new
 
-If you don't want to open a GitHub account you can contact me on...
+If you don't want to create a GitHub account, you can contact me on...
 Reddit: u/ModulusTheDutchie
-Discord: snappyapple632
+Discord & Fluxer (public instance): @snappyapple632
 
-Open a PR
-=========
+Opening a PR
+============
 
 If you're so inclined, you can also make a branch of this
 repo, edit the CSV yourself, and submit a PR to the main
@@ -27,8 +27,8 @@ for me to edit the CSV and push commits myself.
 Formatting
 ==========
 
-Since all the outfit data is stored in CSV format, data can be added with a
-basic text editor. Commented lines in the CSV file provide basic formatting
+Since all the outfit data is stored in a CSV file, data can be added or modified
+with a basic text editor. Commented lines in the CSV file provide basic formatting
 instructions.
 
 If you are editing the CSV using LibreOffice Calc, make sure to load the file
@@ -36,29 +36,29 @@ with "Quoted field as text" enabled to prevent autoformatting. You may need to
 occasionally Ctrl+A the spreadsheet, Format Cells > Set all cell formats to "Text"
 to ensure formatting remains consistent and avoid any potential formatting issues.
 
-# Column A: Data type
-N - Node; represents the date an outfit was formed.
-C - Connector; used to show relationships between outfits.
-See "Inter-outfit Relationships".
-D - Domain; this type is unused.
-SVG - SVG image to be added to the chart. Nodes can be
-directly assigned SVG images. DO NOT USE THIS DATA TYPE
-FOR OUTFIT LOGOS. Doesn't work, reserved for future use.
+# Column A: Data Type
+"N" - Node; this entry creates a dot and branch to represent an outfit
+on the chart.
+"C" - Connector; used to show relationships between outfits.
+"D" - Domain; this type is unused.
+"SVG" or "PNG" - Image added somewhere to the chart. DO NOT USE THIS
+DATA TYPE FOR OUTFIT LOGOS. Nodes can have images directly assigned
+to them. Reserved for future use.
 
 You can comment out an entire row by adding a # before
 the letter indicating data type, e.g. "#N", "#C". Doing
 this will make gnuclad ignore that entry when generating
 the chart. This can be used to keep outfits with insufficient
-data documented but not be used for generation, so as to avoid
-errors without actually omitting data from the CSV.
+data documented, but not be read by gnuclad, to avoid running
+into errors producing charts.
 
 NODES
-# Column B: Outfit Tag and Name
+# Column B: Outfit Tag and Name [REQUIRED]
 
 Should be formatted with the outfit tag and name exactly as it appear(s/ed)
 in the game. e.g. "[00] Recursion"
 
-# Column C: Node Color
+# Column C: Node Color [REQUIRED]
 Node colors are to be assigned by the outfit's main (default) faction in PlanetSide.
 #0138a4 = New Conglomorate
 #c90000 = Terran Republic
@@ -71,7 +71,7 @@ Node colors are to be assigned by the outfit's main (default) faction in PlanetS
 Copy and past the name of an outfit's parent outfit into
 this column, if applicable. Leave blank if they do not have a parent.
 
-# Column E: Start Date
+# Column E: Start Date [REQUIRED]
 - The start date of an outfit must be precise to, at minimum, the year.
   Outfits with no known start year cannot be placed on the chart.
 - The start date must be formatted in the CSV as "YYYY.MM.DD" if using a basic text editor.
