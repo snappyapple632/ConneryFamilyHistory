@@ -14,11 +14,11 @@ Current source: https://github.com/snappyapple632/ConneryFamilyHistory
 
 Original source: https://web.archive.org/web/20220403102136/http://futurist.se/gldt/
 
-### CONTRIBUTING
+## Contributing
 
-See CONTRIBUTING.md
+See the CONTRIBUTING tab next to the README.
 
-### Installation
+## Installation
 
 If you want to build your own version, make sure you have gnuclad
 installed.
