@@ -7,22 +7,36 @@ or even branch off to make your own family tree for outfit belonging to another
 server. You are not obliged to follow this, but you'll ease my job if you do. :)
 
 
-Opening an issue on GitHub
+Opening an issue or PR on GitHub
 ==========================
 
 Open a new issue here: https://github.com/snappyapple632/ConneryFamilyHistory/issues/new
-
-If you don't want to create a GitHub account, you can contact me on...
-Reddit: u/ModulusTheDutchie
-Discord & Fluxer (public instance): @snappyapple632
-
-Opening a PR
-============
 
 If you're so inclined, you can also make a branch of this
 repo, edit the CSV yourself, and submit a PR to the main
 repo. I wouldn't do that honestly, since it's easier
 for me to edit the CSV and push commits myself.
+
+If you don't want to create a GitHub account, you can contact me on...
+Reddit: u/ModulusTheDutchie
+Discord & Fluxer (public instance): @snappyapple632
+
+Basic Rules of Order
+====================
+
+As this document is intended to be a (somewhat) accurate historical account of the former
+Connery server of PlanetSide 2, information must be of a certain level of authenticity.
+This is an ordered list of information sources of sufficient authenticity that must be
+followed when documenting an outfit, from most to least authentic:
+
+1. Personal account of the creator of the outfit, or,
+  a) The last known leader figure
+  b) Knowledgable relatives of the aforementioned figures
+  c) Well-known and reputable member of the outfit
+2. The outfit's page on [Honu](wt.honu.pw). Honu effectively serves as PlanetSide 2's
+unofficial census and statistics center and offers some highly precise information, such
+as with outfit start dates. Most outfit pages on Honu also have a "Mean Login Tate" entry
+which can be used as an imprecise measure of outfit activity.
 
 Formatting
 ==========
@@ -72,8 +86,8 @@ Copy and past the name of an outfit's parent outfit into
 this column, if applicable. Leave blank if they do not have a parent.
 
 # Column E: Start Date [REQUIRED]
+
 - The start date of an outfit must be precise to, at minimum, the year.
-  Outfits with no known start year cannot be placed on the chart.
 - The start date must be formatted in the CSV as "YYYY.MM.DD" if using a basic text editor.
   "YYYY.MM" if the date is precise to the month, "YYYY" if precise to the year.
 - If they do not have a known start date, they cannot be added to the chart.
