@@ -8,21 +8,22 @@ server. You are not obliged to follow this, but you'll ease my job if you do. :)
 
 
 Opening an issue or PR on GitHub
-==========================
+================================
 
 Open a new issue here: https://github.com/snappyapple632/ConneryFamilyHistory/issues/new
 
-If you're so inclined, you can also make a branch of this
-repo, edit the CSV yourself, and submit a PR to the main
-repo. I wouldn't do that honestly, since it's easier
-for me to edit the CSV and push commits myself.
+If you're so inclined, you can also fork this repo, edit the CSV yourself, and submit a PR to 
+the main repo. I wouldn't do that honestly, since it's easier for me to edit the CSV and push 
+commits myself.
 
 If you don't want to create a GitHub account, you can contact me on...
 Reddit: u/ModulusTheDutchie
-Discord & Fluxer (public instance): @snappyapple632
+Discord: snappyapple632
+Fluxer.app: snappyapple632#3114
+Xynosure instance: snappyapple632#0000
 
-Basic Rules of Order
-====================
+Rules of Order
+==============
 
 As this document is intended to be a (somewhat) accurate historical account of the former
 Connery server of PlanetSide 2, information must be of a certain level of authenticity.
@@ -35,8 +36,12 @@ followed when documenting an outfit, from most to least authentic:
   c) Well-known and reputable member of the outfit
 2. The outfit's page on [Honu](wt.honu.pw). Honu effectively serves as PlanetSide 2's
 unofficial census and statistics center and offers some highly precise information, such
-as with outfit start dates. Most outfit pages on Honu also have a "Mean Login Tate" entry
-which can be used as an imprecise measure of outfit activity.
+as outfit start dates that are precise to the minute. Most outfit pages on Honu also have a 
+"Mean Login Date" entry which can be used as an imprecise measure of outfit activity.
+
+**While I understand many will disagree with me including outfits who have a history of 
+controversy within the PlanetSide 2 community, I must maintain impartiality when making these 
+records.**
 
 Formatting
 ==========
@@ -50,14 +55,17 @@ with "Quoted field as text" enabled to prevent autoformatting. You may need to
 occasionally Ctrl+A the spreadsheet, Format Cells > Set all cell formats to "Text"
 to ensure formatting remains consistent and avoid any potential formatting issues.
 
-# Column A: Data Type
-"N" - Node; this entry creates a dot and branch to represent an outfit
+## Column A: Data Type
+**"N" Node -** this entry creates a dot and branch to represent an outfit
 on the chart.
-"C" - Connector; used to show relationships between outfits.
-"D" - Domain; this type is unused.
-"SVG" or "PNG" - Image added somewhere to the chart. DO NOT USE THIS
-DATA TYPE FOR OUTFIT LOGOS. Nodes can have images directly assigned
-to them. Reserved for future use.
+
+**"C" Connector -** used to show relationships between outfits.
+
+**"D" Domain -** this type is unused.
+
+**"SVG" or "PNG" -** Image added somewhere to the chart. DO NOT USE 
+THIS DATA TYPE FOR OUTFIT LOGOS. Instead, use column G of an outfit's node entry. Reserved for 
+future use.
 
 You can comment out an entire row by adding a # before
 the letter indicating data type, e.g. "#N", "#C". Doing
@@ -67,25 +75,32 @@ data documented, but not be read by gnuclad, to avoid running
 into errors producing charts.
 
 NODES
-# Column B: Outfit Tag and Name [REQUIRED]
+=====
 
-Should be formatted with the outfit tag and name exactly as it appear(s/ed)
+### Column B: Outfit Tag and Name [REQUIRED]
+
+Should be formatted with the outfit tag and name exactly as it appears
 in the game. e.g. "[00] Recursion"
 
-# Column C: Node Color [REQUIRED]
+### Column C: Node Color [REQUIRED]
 Node colors are to be assigned by the outfit's main (default) faction in PlanetSide.
-#0138a4 = New Conglomorate
-#c90000 = Terran Republic
-#662bbf = Vanu Soverignty
-#c5c5c5 = Nanite Systems Operative
-#000000 = Unknown
 
-# Column D: Parent
+**#0138a4** = New Conglomorate
+
+**#c90000** = Terran Republic
+
+**#662bbf** = Vanu Soverignty
+
+**#c5c5c5** = Nanite Systems Operative
+
+**#000000** = Unknown
+
+### Column D: Parent
 
 Copy and past the name of an outfit's parent outfit into
 this column, if applicable. Leave blank if they do not have a parent.
 
-# Column E: Start Date [REQUIRED]
+### Column E: Start Date [REQUIRED]
 
 - The start date of an outfit must be precise to, at minimum, the year.
 - The start date must be formatted in the CSV as "YYYY.MM.DD" if using a basic text editor.
@@ -94,7 +109,7 @@ this column, if applicable. Leave blank if they do not have a parent.
 - Any outfit with origins predating PlanetSide 2 (i.e. came from PlanetSide 1
   or possibly even further in the past) are to have their start date set to "2012".
 
-# Column F: Stop Date (Deadfits)
+### Column F: Stop Date (Deadfits)
 
 Same format as column E.
 
@@ -116,7 +131,7 @@ Additionally, any outfit that is deleted from PlanetSide leaves no trace
 - Outfit rebrands (name changes) have their own procedure for documentation.
   See "Column I: Name Change"
 
-# Column G: Icon
+### Column G: Icon
 
 Reserved for future use. Setting this column to "images/outfit_logo.svg"
 should add a an outfit's logo next to the node, but I haven't gotten this
@@ -124,13 +139,13 @@ to work. Gnuclad has very specific requirements for SVGs so I'm not
 bothering with outfit logos for the time being. Gnuclad supposedly
 supports PNGs as well, but I cannot verify this at this time.
 
-# Column H: Description
+### Column H: Description
 
 Any other comments for a particular outfit are left here.
 
-# Column I: Name Change
+### Column I: Name Change
 
-For outfits that undergo a rebrand (i.e. change their name but otherwise
+For outfits that undergo a rebrand (i.e. change their brand but otherwise
 retain the same members, ethos, and philosophy), columns I-K are to
 be used to document these rebrands. They appear on the chart as small
 dots on the same branch as the original outfit.
@@ -142,38 +157,39 @@ neccessary to remove intermediary name changes from the chart to unclutter
 it and leave only the names an outfit settles on for long periods of time.
 These offending name changes can be documented in Column H instead.
 
-# Column J: Date of Name Change
+### Column J: Date of Name Change
 
 Same format as columns E and F. The date of the name change will be
 marked as a smaller dot on the same branch as the outfit's former name.
 
-# Column K: Name Change Description
+### Column K: Name Change Description
 
 Comments pertaining to the outfit's name change.
 
-# Columns L-N:
+### Columns L-N:
 
 Repeat of columns I-K to accomodate for multiple name changes.
 This can be extended further with nesting brackets.
 
 CONNECTORS
+==========
 
-# Column B: From When
+### Column B: From When
 The date of which a connector starts.
 
-# Column C: From
+### Column C: From
 Which outfit the connector stems from. Appears on the
 chart as a semicircle where a dotted line protrudes from.
 
-# Column D: To When
+### Column D: To When
 Optional date for where the connector ends.
 Leaving this blank will set this to the date
 set in column B.
 
-# Column E: To
+### Column E: To
 Which outfit the connector connects to.
 
-# Column F: Thickness
+### Column F: Line Thickness
 Set this column as follows:
 
 "2" for collaborations (e.g. NE0N, BRAC, 53C, etc.
@@ -185,5 +201,5 @@ merged with another should be kept as close together in the CSV
 as reasonably possible. This helps keep connectors short minimizes
 clutter on the chart.
 
-# Column G: Color
-Set this to the faction color of the outfit in column E.
+### Column G: Line Color
+Set this to the faction color of the outfit's node in column E.
